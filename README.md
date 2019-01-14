@@ -28,7 +28,7 @@ The API is deployed and hosted on Heroku. Although I considered deploying on IAA
 
 ## Security
 
-For security, I added a simple IP rate limiter to avoid DOS attacks. If this application were to be scaled across multiple servers, this would have to be configured with a data store such as [Redis](https://www.npmjs.com/package/rate-limit-redis) or [Mongo](https://www.npmjs.com/package/rate-limit-mongo) as storing in memory would not support tracking IPs across multiple instances.
+For security, I added a simple IP rate limiter to protect against DOS attacks. If this application were to be scaled across multiple servers, this would have to be configured with a data store such as [Redis](https://www.npmjs.com/package/rate-limit-redis) or [Mongo](https://www.npmjs.com/package/rate-limit-mongo) as storing in memory would not support tracking IPs across multiple instances.
 
 I also added [Helmet](https://github.com/helmetjs/helmet) middleware to protect against various attacks through HTTP headers. Although it is not a fully robust security framework, it is a simple way to add a bit of a security layer to an express app.
 
