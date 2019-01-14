@@ -1,7 +1,7 @@
 
 # Shopify Developer Challenge - Francesco Virga
 
-API URL: https://shopify-developer-challenge.herokuapp.com/
+API URL: https://shopify-developer-challenge.herokuapp.com/<br/>
 [API Documentation](https://francescov1.github.io/shopify-developer-challenge-docs)
 
 ## File Structure
@@ -38,4 +38,4 @@ The API documentation was made using [Slate](https://github.com/lord/slate). It 
 
 ## Tests
 
-I wrote integration tests using [Jest](https://jestjs.io) and [Supertest](https://www.npmjs.com/package/supertest). These tests cover basic usage of the API and can be found in the <i>tests</i> folder.
+I wrote integration tests using [Jest](https://jestjs.io) and [Supertest](https://www.npmjs.com/package/supertest). These tests cover basic usage of the API and can be found in the <i>tests</i> folder. To run them, simply enter `npm test` after cloning the repository.
