@@ -38,19 +38,6 @@ module.exports = {
       })
     .then(product => res.status(201).send(product))
     .catch(err => next(err));
-  },
-
-// TODO: get rid of when submitting
-  addProduct: function(req, res, next) {
-    const product = new Product({
-      title: req.body.title,
-      price: req.body.price,
-      inventory: req.body.inventory
-    });
-
-    return product.save()
-      .then(product => res.status(201).send(product))
-      .catch(err => next(err));
   }
 
 };

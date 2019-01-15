@@ -73,4 +73,4 @@ describe("shopping cart tests", () => {
         expect(response.body.state).toBe("complete");
       });
   });
-})
+});

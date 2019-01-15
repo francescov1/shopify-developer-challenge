@@ -29,7 +29,7 @@ describe("product tests", () => {
           expect(product.inventory).toBeGreaterThan(0);
         }
       });
-  })
+  });
 
   test("get product", () => {
     return global.agent.get(`/api/products/${testProductId}`)
@@ -57,13 +57,13 @@ describe("product tests", () => {
         expect(response.body.inventory).toBe(testProductInventory - 1);
       });
   });
-/*
+
   test("purchase unavailable product", () => {
     return global.agent.post(`/api/products/${unavailableProductId}`)
       .then(response => {
         expect(response.statusCode).toBe(405);
         expect(response.body.error.type).toBe("NotAllowedError");
       });
-  })
-  */
-})
+  });
+
+});
