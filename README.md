@@ -6,7 +6,7 @@ API URL: https://shopify-developer-challenge.herokuapp.com/<br/>
 
 ## File Structure
 
-The structure of this project is how I have designed most APIs I've worked on in the past. I split up my routes, controllers, models, and error in separate folders. Although it is somewhat overkill to also place config in its own folder, I find it to be useful for large-scale projects thus I like to start in a scalable manner. All external SDKs required (only mongoose in this case) have their own configuration file under the <i>config</i> folder.
+The structure of this project is how I have designed most APIs I've worked on in the past. I split up my routes, controllers, models, config, and errors in separate folders. All external SDKs required (only mongoose in this case) have their own configuration file under the <i>config</i> folder.
 
 The entry point is <i>index.js</i>, which creates the express app and adds basic middleware. It then passes the express app into <i>router.js</i> which mounts all routes and additional middleware.
 
