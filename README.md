@@ -20,21 +20,21 @@ The API design is simple. All product routes live at `/api/products` and all sho
 
 ## Database
 
-A MongoDB database is used for this project, along with mongoose as the driver. I have found this combination of database and driver to work extremely well for Node.js projects as it is both very powerful (ie. aggregation, geo queries, population, etc.) but also quick and easy to setup for a small project. The MongoDB deployment is managed through mLab.
+A MongoDB database is used for this project, along with mongoose as an ODM. I have found this combination to work extremely well for Node.js projects as it is both very powerful (ie. aggregation, geo queries, population, etc.) but also quick and easy to setup for a small project. The MongoDB deployment is managed through mLab.
 
 ## Hosting
 
-The API is deployed and hosted on Heroku. Although I considered deploying on IAAS such as Google Compute Engine or AWS EC2, I chose to go with Heroku as it comes at zero cost for such tier and provides a nice interface to quickly deploy an application without the need for much additional configuration. Its add-ons also allow for seamless integration with mLab.
+The API is deployed and hosted on [Heroku](https://www.heroku.com/). Although I considered deploying on IaaS such as Google Compute Engine or AWS EC2, I chose to go with Heroku as it comes at zero cost for such tier and provides a nice interface to quickly deploy an application without the need for much additional configuration. Its add-ons also allow for seamless integration with mLab.
 
 ## Security
 
-For security, I added a simple IP rate limiter to protect against DOS attacks. If this application were to be scaled across multiple servers, this would have to be configured with a data store such as [Redis](https://www.npmjs.com/package/rate-limit-redis) or [Mongo](https://www.npmjs.com/package/rate-limit-mongo) as storing in memory would not support tracking IPs across multiple instances.
+For security, I added a simple rate limiter to protect against DDoS attacks (see <i>router.js</i>). If this application were to be scaled across multiple servers, this would have to be configured with a data store such as [Redis](https://www.npmjs.com/package/rate-limit-redis) or [Mongo](https://www.npmjs.com/package/rate-limit-mongo) as storing in memory would not support tracking across multiple instances.
 
 I also added [Helmet](https://github.com/helmetjs/helmet) middleware to protect against various attacks through HTTP headers. Although it is not a fully robust security framework, it is a simple way to add a bit of a security layer to an express app.
 
 ## Documentation
 
-The API documentation was made using [Slate](https://github.com/lord/slate). It outline all routes and errors associated with the API.
+The API documentation was made using [Slate](https://github.com/lord/slate). It outline all routes and errors associated with the API and can be found [here](https://francescov1.github.io/shopify-developer-challenge-docs).
 
 ## Tests
 
