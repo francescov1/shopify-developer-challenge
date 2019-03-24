@@ -1,8 +1,8 @@
 
 # Shopify Developer Challenge - Francesco Virga
 
-API URL: https://shopify-developer-challenge.herokuapp.com/<br/>
-[API Documentation](https://francescov1.github.io/shopify-developer-challenge-docs)
+API URL: https://shopify-developer-challenge.herokuapp.com
+
 
 ## File Structure
 
